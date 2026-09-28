@@ -1,0 +1,26 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. EMPLOYEE-PROCESSING.
+
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+
+       01  WS-EMPLOYEE.
+           05 WS-EMP-ID        PIC 9(6).
+           05 WS-EMP-NAME      PIC X(30).
+           05 WS-DEPARTMENT    PIC X(20).
+           05 WS-SALARY        PIC 9(7)V99.
+
+       PROCEDURE DIVISION.
+
+       MAIN-PROCESS.
+           MOVE 100001 TO WS-EMP-ID
+           MOVE 'JOHN SMITH' TO WS-EMP-NAME
+           MOVE 'IT' TO WS-DEPARTMENT
+           MOVE 75000.00 TO WS-SALARY
+
+           DISPLAY 'EMPLOYEE ID   : ' WS-EMP-ID
+           DISPLAY 'EMPLOYEE NAME : ' WS-EMP-NAME
+           DISPLAY 'DEPARTMENT    : ' WS-DEPARTMENT
+           DISPLAY 'SALARY        : ' WS-SALARY
+
+           STOP RUN.
